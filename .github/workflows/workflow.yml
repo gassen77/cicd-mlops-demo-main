@@ -18,6 +18,8 @@ jobs:
       - uses: iterative/setup-cml@v2
       - name: Install Packages
         run: pip install --upgrade pip && pip install -r requirements.txt
+             && pip install black  # Install the black formatter
+
       - name: Format
         run: black *.py
       - name: Train
